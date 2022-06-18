@@ -20,13 +20,20 @@ function monthlyPayroll() {
     let salary = Number($('.salary').val());
     //console.log(salary);
 
+    // resets input values to blank
+    $('.fname').val('');
+    $('.lname').val('');
+    $('.id').val('');
+    $('.job-title').val('');
+    $('.salary').val('');
+
     $('.employee-container').append(`
     <tr class="employee-row">
         <td>${firstName}</td>
         <td>${lastName}</td>
         <td>${id}</td>
         <td>${job}</td>
-        <td>${salary}</td>
+        <td class ="">${salary}</td>
         <td><button type="button" class="toDelete">Delete</button></td>
     </tr>`);
 
