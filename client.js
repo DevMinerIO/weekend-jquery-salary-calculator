@@ -29,6 +29,10 @@ $('.employee-container').append(`
 </tr>`)
 
 sum += salary;
-$('.monthly-result').text(sum);
-//$('.monthly-result').empty().append(sum);
+//$('.monthly-result').text(sum);
+$('.monthly-result').empty().append(sum);
+if( sum > 20000) {
+    $(".monthly-result").css("background-color", "red");
 }
+}
+
