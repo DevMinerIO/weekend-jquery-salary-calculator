@@ -4,28 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Salary Calculator</title>
     <link rel="stylesheet" href="style.css">
     <script src="jquery-3.6.0.min.js"></script>
     <script src="client.js"></script>
 </head>
 <body>
+    <h1 class="title">Salary Calculator</h1>
     <!-- Inputs -->
     <label for="" class="description"></label>
-    <input type="text" placeholder="First Name" class="input">
+    <input type="text" placeholder="First Name" class="input fname">
     
     <label for="" class="description"></label>
-    <input type="text" placeholder="Last Name" class="input">
+    <input type="text" placeholder="Last Name" class="input lname">
 
     <label for="" class="description"></label>
-    <input type="number" placeholder="ID Number" class="input">
+    <input type="number" placeholder="ID Number" class="input id">
 
     <label for="" class="description"></label>
-    <input type="text" placeholder="Job Title" class="input">
+    <input type="text" placeholder="Job Title" class="input job-title">
 
     <label for="" class="description"></label>
-    <input type="number" placeholder="Annual Salary" class="input">
-
-    
+    <input type="number" placeholder="Annual Salary" class="input salary">
+    <br>
+        <!-- Buttons, able to be submit? -->
+    <button type="button" class="submit">Show Results</button>
+    <br>
+    <!-- ADD TO JQUERY TABLE -->
+    <button type="button" class="toDelete">Delete</button>
+    <!-- This is where you add the employees with jQuery -->
+    <table class="Employee-container">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Annual Salary</th>
+        </tr>
+    </table>
+    <P>Total Monthly: <span class="monthly-result">0</span></P>
 </body>
 </html>
