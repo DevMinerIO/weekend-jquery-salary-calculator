@@ -27,7 +27,8 @@ function monthlyPayroll() {
     $('.job-title').val('');
     $('.salary').val('');
 
-    $('.employee-container').append(`
+    //Changed html to have proper table elements. Used this before: $('.employee-container').append(`
+    $('.test').append(`
     <tr class="employee-row">
         <td>${firstName}</td>
         <td>${lastName}</td>
@@ -48,6 +49,5 @@ function handleDelete() {
     //parents function also works if you use the .employee-row in the argument to match it. 
     //$(this).parents('.employee-row').remove();
     $(this).closest('.employee-row').remove();
-    //$(this).closest('.employee-row').;
 }
 
