@@ -35,17 +35,19 @@ function monthlyPayroll() {
         <td>${lastName}</td>
         <td>${id}</td>
         <td>${job}</td>
-        <td class ="">${salary}</td>
+        <td class ="">$ ${salary.toLocaleString(undefined,{minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
         <td><button type="button" class="toDelete">Delete</button></td>
     </tr>`);
 
     sum += salary;
     // gets monthly instead of total payroll. 
-    monthlyTotal = sum / 12;
+    monthlyTotal = sum / 12; 
+    // Below works for rounding to 2 decimal
+    monthlyTotal = Math.round(monthlyTotal * 100) / 100;
     //$('.monthly-result').text(sum); Also works
-    // used math.round(variable * 100) /100 to reduce to 2 decimal places.
-    $('.annual-result').empty().append(Math.round(sum * 100) / 100);
-    $('.monthly-result').empty().append(Math.round(monthlyTotal * 100) / 100);
+    //$('.monthly-result').empty().append(Math.round(monthlyTotal * 100) / 100);
+    $('.annual-result').empty().append(sum.toLocaleString(undefined,{minimumFractionDigits: 2, maximumFractionDigits: 2}));
+    $('.monthly-result').empty().append(monthlyTotal.toLocaleString(undefined,{minimumFractionDigits: 2, maximumFractionDigits: 2}));
     if( monthlyTotal > 20000) {
         $(".monthly-result").css("background-color", "red");
     }
