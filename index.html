@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salary Calculator</title>
+    <link href="http://fonts.cdnfonts.com/css/cookie-cutter-culture" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="jquery-3.6.0.min.js"></script>
     <script src="client.js"></script>
@@ -20,7 +21,7 @@
     <input type="text" placeholder="Last Name" class="input lname" name="lname" >
 
     <label for="employee-id" class="description"></label>
-    <input type="number" placeholder="ID Number" class="input id" name="employee-id" >
+    <input type="number" placeholder=" I D Number" class="input id" name="employee-id" >
 
     <label for="job" class="description"></label>
     <input type="text" placeholder="Job Title" class="input job-title" name="job" >
@@ -29,7 +30,7 @@
     <input type="number" placeholder="Annual Salary" class="input salary" name="money" >
     <br>
         <!-- Buttons, able to be submit? -->
-    <button type="button" class="submit">Show Results</button>
+    <button type="button" class="submit">Add</button>
     <br>
     <!-- This is where you add the employees with jQuery -->
     <table class="employee-container">
@@ -37,13 +38,14 @@
             <tr>
                 <th>First Name</th>
                 <th>Last Name</th>
-                <th>ID</th>
-                <th>Title</th>
+                <th>I D</th>
+                <th>Job Title</th>
                 <th>Annual Salary</th>
             </tr>
         </thead>
-        <tbody class="test"></tbody>
+        <tbody class="add-employee"></tbody>
     </table>
-    <P class="cost-container">Total Monthly Cost: <span class="monthly-result">0</span></P>
+    <P class="annual-container">Total Annual Cost: $ <span class="annual-result">0</span></P>
+    <P class="cost-container">Total Monthly Cost: $ <span class="monthly-result">0</span></P>
 </body>
 </html>

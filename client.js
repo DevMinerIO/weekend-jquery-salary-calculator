@@ -7,6 +7,7 @@ function onReady() {
     // .employee-container .toDelete .employee-row
 }
 let sum = 0;
+let monthlyTotal = 0;
 
 function monthlyPayroll() {
     let firstName = $('.fname').val();
@@ -28,7 +29,7 @@ function monthlyPayroll() {
     $('.salary').val('');
 
     //Changed html to have proper table elements. Used this before: $('.employee-container').append(`
-    $('.test').append(`
+    $('.add-employee').append(`
     <tr class="employee-row">
         <td>${firstName}</td>
         <td>${lastName}</td>
@@ -39,9 +40,13 @@ function monthlyPayroll() {
     </tr>`);
 
     sum += salary;
-    //$('.monthly-result').text(sum);
-    $('.monthly-result').empty().append(sum);
-    if( sum > 20000) {
+    // gets monthly instead of total payroll. 
+    monthlyTotal = sum / 12;
+    //$('.monthly-result').text(sum); Also works
+    // used math.round(variable * 100) /100 to reduce to 2 decimal places.
+    $('.annual-result').empty().append(Math.round(sum * 100) / 100);
+    $('.monthly-result').empty().append(Math.round(monthlyTotal * 100) / 100);
+    if( monthlyTotal > 20000) {
         $(".monthly-result").css("background-color", "red");
     }
 }

@@ -1,3 +1,44 @@
+
 * { 
-    background-color: aqua;
+    background-color: #98FB98;
+    font-family: 'Cookie Cutter Culture', sans-serif;
+    font-size: 22px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+}
+h2 {
+    text-decoration: underline;
+    text-decoration-color: #E3E7F0;
+}
+table {
+    width: 100%;
+}
+table, tr, td{
+    border: 2px solid;
+}
+table {
+    text-align: center;
+}
+.toDelete {
+    position:relative;
+    font-size: 26px;
+    text-align: center;
+}
+.cost-container, .monthly-result {
+    font-size:  30px;
+    text-align: center;
+    font-weight: bold;
+}
+.annual-container {
+    font-weight: bold;
+}
+button {
+    background-color: #E3E7F0;
+    margin: 12px;
+}
+.submit {
+    width: 20%;
 }
